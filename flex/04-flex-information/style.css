@@ -1,5 +1,9 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  
+  /* added, all text on page is centered so just place
+      here for inheritance to do its work */
+  text-align: center;
 }
 
 img {
@@ -10,7 +14,30 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+
+  /* added - create spacing below title */
+  margin-bottom: 32px;
 }
+
+/* added */
+.cards {
+  display: flex;
+  gap: 52px;
+  /* makes it so as screen width decreases, the
+      cards move to center until can't decrease. if not
+      will just go off screen without moving to left */
+  justify-content: center;
+}
+
+/* added - solutio missing column & align-items center */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+
 
 /* do not edit this footer */
 .footer {
