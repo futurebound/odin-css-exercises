@@ -56,8 +56,16 @@ button {
 .popup-modal.show {
   opacity: 100%;
   pointer-events: all;
+  transform: translate(-50%, -50%);
+  /* ^ brings modal "down" from above */
 }
 
 .backdrop.show {
   opacity: 30%;
+}
+
+.popup-modal {
+  transition: transform 0.3s ease-in-out, opacity 0.4s ease;
+  transform: translate(-50%, -100%);
+  /* ^ sets original position (-50 -100) "higher" than final position (-50 -50) */
 }
